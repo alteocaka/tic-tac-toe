@@ -1,10 +1,14 @@
 main{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-gap: 0px;
+    grid-template-columns: 150px 150px 150px;
 }
 
 app-square{
     border: 1px solid gray;
-    height: 200px;
+    height: 150px;
 }
+
+div{
+    outline: green 1px solid;
+}
+
