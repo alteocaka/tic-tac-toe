@@ -1,14 +1,21 @@
 main{
     display: grid;
-    grid-template-columns: 150px 150px 150px;
+    grid-template-columns: 8rem 8rem 8rem;
 }
 
 app-square{
     border: 1px solid gray;
-    height: 150px;
+    height: 8rem;
 }
 
-div{
-    outline: green 1px solid;
+h1{
+    text-align: center;
+    font-family: 'Bangers', cursive !important;
+    color: rgb(52, 204, 166);
+    letter-spacing: 5px !important;
+}
+
+.winner{
+    color: rgb(235, 65, 107);
 }
 

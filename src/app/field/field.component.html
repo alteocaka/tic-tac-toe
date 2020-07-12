@@ -1,17 +1,21 @@
-<div class="container" style="height: 100vh;">
-  <h1 class="pt-3">Current player: {{ player }}</h1>
+<div class="container-fluid p-0 m-0">
+  <h1 class="mat-display-4 m-3 pt-3">TIC-TAC-TOE</h1>
+  <h1 *ngIf="!winner" class="mat-display-1 m-2">Current player: {{ player }}</h1>
+  <h1 *ngIf="winner" class="mat-display-1 m-2 winner">Player {{ winner }} won!</h1>
+  <div class="d-flex justify-content-center m-3">
+    <button *ngIf="winner" mat-raised-button color="accent" (click)="newGame()">
+      Start a new game!
+    </button>
+  </div>
 
-  <button mat-raised-button color="accent" (click)="newGame()">
-    Start a new game!
-  </button>
-
-  <h2 class="pt-4" *ngIf="winner">Player {{ winner }} won!</h2>
-  <main class="pt-4">
-    <app-square
-      *ngFor="let val of squares; let i = index"
-      [value]="val"
-      (click)="makeMove(i)"
-    >
-    </app-square>
-  </main>
+  <div class="d-flex justify-content-center m-0 p-0">
+    <main>
+      <app-square
+        *ngFor="let val of squares; let i = index"
+        [value]="val"
+        (click)="makeMove(i)"
+      >
+      </app-square>
+    </main>
+  </div>
 </div>
